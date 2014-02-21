@@ -13,7 +13,12 @@ alias -g ONE="| awk '{ print \$1}'"
 
 # git
 alias g="git"
+alias gs="git status -sb"
+alias gd="git diff"
+alias gdc="git diff --cached"
 alias gci="git pull --rebase && rake && git push"
+alias gco="git checkout"
+alias gds="git diff --staged"
 
 # Ruby
 alias help-strftime='ruby ~/bin/help-strftime.rb'

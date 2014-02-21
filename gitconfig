@@ -2,3 +2,21 @@
   default = tracking
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
+[user]
+	name = Dave Burt
+	email = dave.burt@allori.com.au
+[core]
+	excludesfile = /home/dave/.gitignore_global
+[color]
+	ui = auto
+[alias]
+	amend = commit --amend -C HEAD
+	undo = reset --soft HEAD^
+	ls = log --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
+	standup = log --since \"1 day ago\" --oneline --author \"Dave Burt\"
+	graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+	latest = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
+	st = status -bs
+	ci = pull --rebase && rake && git push
+	co = checkout
+	ds = diff --staged

@@ -19,3 +19,6 @@ setopt prompt_subst
 # prompt
 export PS1='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
 
+export EDITOR=vim
+
+export SVNREPO=https://secure.allori.com.au/svn
