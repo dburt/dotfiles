@@ -9,25 +9,26 @@ set laststatus=2  " Always display the status line
 set autoindent
 
 " Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails.git'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/nerdtree'
-Bundle 'ack.vim'
-Bundle 'Buffergator'
-Bundle 'ctrlp.vim'
-Bundle 'SuperTab'
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails.git'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ack.vim'
+Plugin 'Buffergator'
+Plugin 'ctrlp.vim'
+Plugin 'SuperTab'
+call vundle#end()
+filetype plugin indent on
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
-
-filetype plugin indent on
 
 augroup vimrcEx
   au!
@@ -64,7 +65,8 @@ endif
 
 " Color scheme
 "colorscheme github
-colorscheme torte
+"colorscheme torte
+colorscheme default
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
